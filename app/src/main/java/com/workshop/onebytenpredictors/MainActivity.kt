@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         binding.layoutNew.visibility=View.GONE
         binding.buttonPredict.isEnabled=false
 
+        openNews()
+
 
         binding.etText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -53,26 +55,14 @@ class MainActivity : AppCompatActivity() {
         binding.buttonPredict.setOnClickListener {
             binding.layoutDefault.visibility = View.GONE
 
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = Adapter(this@MainActivity, modelClassArrayList)
-//            binding.recyclerDefault.adapter = adapter
-//            binding.recyclerDefault.layoutManager = layoutManager
-
-//            findNews()
-
-            binding.textV.setText(binding.etText.text)
             binding.layoutNew.visibility = View.VISIBLE
         }
     }
 
-//    private fun findNews(){
-//        ApiUtilities.getApiInterface().getNews(country,100,api).enqueue(new Callback<NewsArrayClass>() {
-//            @Override
-//            public fun onResponse(Call<NewsArrayClass> call, Response<NewsArrayClass> response){
-//
-//            }
-//        });
-//    }
-
+    fun openNews() {
+        var fragment = NewsFragment()
+        var transaction = supportFragmentManager.beginTransaction()
+            .replace(R.id.layoutDefault, NewsFragment()).commit()
+    }
 
 }

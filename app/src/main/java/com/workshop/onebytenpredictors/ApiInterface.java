@@ -10,14 +10,14 @@ public interface ApiInterface {
     @GET ("top-headlines")
     Call<NewsArrayClass> getNews(
         @Query("country") String country,
-        @Query("pageSize") String pageSize,
-        @Query("apiKey") String apiKey
+        @Query("pageSize") int pageSize,
+       @Query("apiKey") String apiKey
     );
     @GET ("top-headlines")
     Call<NewsArrayClass> getCategoryNews(
         @Query("country") String country,
         @Query("category") String category,
-        @Query("pageSize") String pageSize,
+        @Query("pageSize") int pageSize,
         @Query("apiKey") String apiKey
     );
 }
