@@ -11,6 +11,8 @@
     <color name="blue_dark">#2196F3</color>
     <color name="blue_light">#49C6FF</color>
     <color name="grey">#F3F3F3</color>
+    <color name="purple">#8784E3</color>
+    <color name="purple_dark">#7978FF</color>
 
     <color name="background">#FFFFFF</color>
     <color name="foreground">#000000</color>
