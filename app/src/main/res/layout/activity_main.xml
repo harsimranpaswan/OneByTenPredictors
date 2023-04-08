@@ -13,11 +13,11 @@
         android:background="@drawable/app_gradient" />
 
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="20dp"
         android:id="@+id/cardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:elevation="10dp"
@@ -75,34 +75,17 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
         android:layout_below="@id/cardLayout"
         android:layout_margin="10dp"
+        android:background="@color/background"
         app:cardCornerRadius="10dp">
 
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/layoutDefault"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textDefault"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                android:text="Enter the Stock Symbol for its sentimental Analysis"
-                android:textAlignment="center"
-                android:textColor="@color/foreground"
-                android:textSize="20sp" />
-
-            <ImageView
-                android:id="@+id/imgDefault"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:src="@drawable/stock_market" />
-
-        </RelativeLayout>
+        </FrameLayout>
 
 
         <RelativeLayout
@@ -124,35 +107,37 @@
                 android:textColor="@color/foreground"
                 android:textSize="20sp" />
 
-            <ScrollView
-                android:id="@+id/scroller"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textV"
-                android:layout_margin="15dp">
 
-                <TextView
-                    android:id="@+id/textOut"
+                <ScrollView
+                    android:id="@+id/scroller"
+                    android:layout_below="@id/textV"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="output appears here"
-                    android:textAlignment="center"
-                    android:textColor="@color/foreground"
-                    android:textSize="18sp" />
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="?attr/actionBarSize">
 
-            </ScrollView>
+                    <TextView
+                        android:id="@+id/textOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="predicted_text"
+                        android:textAlignment="center"
+                        android:textColor="@color/foreground"
+                        android:textSize="18sp" />
+                </ScrollView>
 
             <Button
                 android:id="@+id/buttonCopy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/round_button"
                 android:elevation="10dp"
-                android:layout_below="@id/scroller"
+                android:layout_alignParentBottom="true"
                 android:text="Copy Text" />
 
         </RelativeLayout>

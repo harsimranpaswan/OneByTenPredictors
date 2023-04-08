@@ -7,8 +7,8 @@
         android:bottomLeftRadius="350dp"
         android:bottomRightRadius="350dp"/>
     <gradient
-        android:startColor="@color/blue"
-        android:endColor="@color/blue_light"
+        android:startColor="@color/purple_dark"
+        android:endColor="@color/purple"
         android:type="radial"
         />
 </shape>
