@@ -57,6 +57,11 @@ class MainActivity : AppCompatActivity() {
 
             binding.layoutNew.visibility = View.VISIBLE
         }
+
+        binding.buttonBack.setOnClickListener {
+            binding.layoutDefault.visibility = View.VISIBLE
+            binding.layoutNew.visibility = View.GONE
+        }
     }
 
     fun openNews() {
