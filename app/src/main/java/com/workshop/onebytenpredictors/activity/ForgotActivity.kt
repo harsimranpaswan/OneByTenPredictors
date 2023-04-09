@@ -26,7 +26,7 @@ class ForgotActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         emailFocusListener()
 
-        binding.buttonSignin.setOnClickListener {
+        binding.buttonRecover.setOnClickListener {
             if (mailV) {
                 firebaseAuth.sendPasswordResetEmail(binding.etMail.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful) {
@@ -42,7 +42,8 @@ class ForgotActivity : AppCompatActivity() {
             }
         }
         binding.tvBack.setOnClickListener {
-            onBackPressed()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
         binding.tvSignup.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)

@@ -31,13 +31,13 @@ class RegisterActivity : AppCompatActivity() {
         cnfValidator()
 
         binding.buttonSignup.setOnClickListener {
-            if (mailV && cnfPasswordV) {
+            if (nameV && mailV && passwordV && cnfPasswordV) {
                 firebaseAuth.createUserWithEmailAndPassword(binding.etMail.text.toString(), binding.etPassword.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val intent = Intent(this, LoginActivity::class.java)
-                        intent.flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
-                    } else {
+                    }
+                    else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -47,9 +47,10 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
         binding.tvback.setOnClickListener {
-            onBackPressed()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
-        binding.buttonSignup.setOnClickListener {
+        binding.tvSignin.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }

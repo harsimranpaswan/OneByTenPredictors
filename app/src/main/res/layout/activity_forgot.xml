@@ -78,7 +78,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/buttonSignin"
+                android:id="@+id/buttonRecover"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/mailLayout"
@@ -122,27 +122,27 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textV3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cardLayout"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="10dp"
-        android:text="or continue using"
-        android:textAlignment="center"
-        android:textColor="@color/foreground"
-        android:textSize="18sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/textV3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/cardLayout"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:text="or continue using"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/foreground"-->
+<!--        android:textSize="18sp" />-->
 
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/textV3"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/round_button"
-        android:backgroundTint="@color/background"
-        android:elevation="10dp"
-        android:src="@drawable/googleg_standard_color_18" />
+<!--    <ImageButton-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_below="@id/textV3"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@drawable/round_button"-->
+<!--        android:backgroundTint="@color/background"-->
+<!--        android:elevation="10dp"-->
+<!--        android:src="@drawable/googleg_standard_color_18" />-->
 
 
 </RelativeLayout>
