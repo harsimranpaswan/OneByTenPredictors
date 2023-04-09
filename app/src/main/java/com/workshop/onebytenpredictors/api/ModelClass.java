@@ -1,4 +1,4 @@
-package com.workshop.onebytenpredictors;
+package com.workshop.onebytenpredictors.api;
 
 public class ModelClass {
     private String author, title,description, url,urlToImage,publishedAt;

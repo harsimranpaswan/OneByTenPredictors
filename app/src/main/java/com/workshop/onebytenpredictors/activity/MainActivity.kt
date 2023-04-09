@@ -1,18 +1,18 @@
-package com.workshop.onebytenpredictors
+package com.workshop.onebytenpredictors.activity
 
-import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.LinearLayout
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.workshop.onebytenpredictors.adapter.Adapter
+import com.workshop.onebytenpredictors.api.ModelClass
+import com.workshop.onebytenpredictors.fragment.NewsFragment
+import com.workshop.onebytenpredictors.R
 import com.workshop.onebytenpredictors.databinding.ActivityMainBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,8 +21,9 @@ class MainActivity : AppCompatActivity() {
     val country="in"
     lateinit var modelClassArrayList:ArrayList<ModelClass>
     lateinit var layoutManager: RecyclerView.LayoutManager
-    lateinit var adapter:Adapter
+    lateinit var adapter: Adapter
 
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,10 +53,18 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        firebaseAuth = FirebaseAuth.getInstance()
+
         binding.buttonPredict.setOnClickListener {
             binding.layoutDefault.visibility = View.GONE
 
             binding.layoutNew.visibility = View.VISIBLE
+        }
+        binding.buttonSignout.setOnClickListener {
+            firebaseAuth.signOut()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         binding.buttonBack.setOnClickListener {
@@ -67,7 +76,9 @@ class MainActivity : AppCompatActivity() {
     fun openNews() {
         var fragment = NewsFragment()
         var transaction = supportFragmentManager.beginTransaction()
-            .replace(R.id.layoutDefault, NewsFragment()).commit()
+            .replace(R.id.layoutDefault,
+                NewsFragment()
+            ).commit()
     }
 
 }
