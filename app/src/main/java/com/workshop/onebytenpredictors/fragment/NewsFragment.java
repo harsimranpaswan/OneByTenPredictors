@@ -1,4 +1,4 @@
-package com.workshop.onebytenpredictors;
+package com.workshop.onebytenpredictors.fragment;
 
 import android.os.Bundle;
 
@@ -10,6 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.workshop.onebytenpredictors.adapter.Adapter;
+import com.workshop.onebytenpredictors.R;
+import com.workshop.onebytenpredictors.api.ApiUtilities;
+import com.workshop.onebytenpredictors.api.ModelClass;
+import com.workshop.onebytenpredictors.api.NewsArrayClass;
 
 import java.util.ArrayList;
 

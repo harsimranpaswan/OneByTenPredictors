@@ -1,4 +1,4 @@
-package com.workshop.onebytenpredictors;
+package com.workshop.onebytenpredictors.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

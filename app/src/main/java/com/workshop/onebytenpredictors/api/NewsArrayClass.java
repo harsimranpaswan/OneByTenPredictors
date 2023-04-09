@@ -1,4 +1,4 @@
-package com.workshop.onebytenpredictors;
+package com.workshop.onebytenpredictors.api;
 
 import java.util.ArrayList;
 

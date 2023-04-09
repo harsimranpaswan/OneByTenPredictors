@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "733476192352",
+    "project_id": "one-by-ten-predictors",
+    "storage_bucket": "one-by-ten-predictors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733476192352:android:28b528c2bd7f8ca7418305",
+        "android_client_info": {
+          "package_name": "com.workshop.onebytenpredictors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733476192352-dim5qsl4o2nlcd59c93n92mdfv13lnco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.workshop.onebytenpredictors",
+            "certificate_hash": "d3f36501f1fef6e9e8e0c28761136e714a133615"
+          }
+        },
+        {
+          "client_id": "733476192352-6blisk5qsvgar20u4sd7d6v3b0bupr4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA72AeKGdHsMI1WdTppHpT-Vo8sKoSgVO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733476192352-6blisk5qsvgar20u4sd7d6v3b0bupr4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
